@@ -215,7 +215,7 @@ body {
     $offset: abs(($i - ($total - 1) / 2) / ($total - 2) * $offsetRange);
     .card:nth-child(#{$i + 1}) {
       .card-face {
-      background-image: url("../BaseCard2.png"), url("./assets/CardArt/image#{$i + 1}.png");
+      background-image: url("../BaseCard2.png"), url("../assets/CardArt/image#{$i + 1}.png");
       background-position: top left, center 4%;
       border-radius: 5%;
     
