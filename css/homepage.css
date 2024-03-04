@@ -153,7 +153,7 @@ body {
 }
 
 .card:nth-child(1) .card-face {
-  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image1.png");
+  background-image: url("../BaseCard2.png"), url("./assets/CardArt/image1.png");
   background-position: top left, center 4%;
   border-radius: 5%;
   transform: translateX(6.6%) translateY(6.6%) rotate(-37.5deg);
@@ -177,7 +177,7 @@ body {
 }
 
 .card:nth-child(2) .card-face {
-  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image2.png");
+  background-image: url("../BaseCard2.png"), url("./assets/CardArt/image2.png");
   background-position: top left, center 4%;
   border-radius: 5%;
   transform: translateX(2.2%) translateY(2.2%) rotate(-12.5deg);
@@ -200,7 +200,7 @@ body {
 }
 
 .card:nth-child(3) .card-face {
-  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image3.png");
+  background-image: url("../BaseCard2.png"), url("./assets/CardArt/image3.png");
   background-position: top left, center 4%;
   border-radius: 5%;
   transform: translateX(2.2%) translateY(2.2%) rotate(12.5deg);
@@ -223,7 +223,7 @@ body {
 }
 
 .card:nth-child(4) .card-face {
-  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image4.png");
+  background-image: url("../BaseCard2.png"), url("./assets/CardArt/image4.png");
   background-position: top left, center 4%;
   border-radius: 5%;
   transform: translateX(6.6%) translateY(6.6%) rotate(37.5deg);
