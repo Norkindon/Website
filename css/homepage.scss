@@ -1,0 +1,365 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+html,
+
+
+body {
+  height: 100%;
+  width: 101vw;
+  //aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  background-image: url("../assets/Floor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* Added this line to center the background image */
+  overflow: hidden;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  //cursor: none;
+  
+}
+
+
+
+
+
+#custom-cursor {
+    
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 15%;
+  z-index: 1000;
+  pointer-events:none; /* Ensure the cursor doesn't interfere with underlying elements */
+  &:active {
+    //background-image: url('assets/hand/fingerhandclicked.png');
+    background-position: center top; 
+    //animation: slide 1000ms ease-out forwards;  
+    
+      }
+      
+}
+
+
+.container{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    aspect-ratio: 1 / 1;
+}
+
+
+
+
+
+.cards {
+  
+  bottom: 75%;
+  display: flex;
+  height: 0px;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  scale: 1.5;
+  
+  
+}
+
+@media (max-width: 500px) {
+  .cards {
+    //bottom: 50vh;
+    transform: scale(1); //2
+  }
+ 
+  
+}
+
+
+
+
+
+
+.card {
+    height: 18vw;
+    width: auto;
+    aspect-ratio: 4 / 6;
+    max-width: fit-content;
+    // margin: 2vw; //0.5
+    position: relative;
+    display: flex;
+    
+    
+    
+  
+  &:after {
+    // uncomment background below to see hit areas
+    //background: rgba(255, 0, 0, 0.15);
+    bottom: 0;
+    content: '';
+    
+    position: absolute;
+    
+    top: 0px;
+    z-index: 10
+  }
+}
+
+.card-face {
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  // position: absolute;
+  position: relative; /* Ensure positioning context for absolute positioning */
+  right: 0;
+  top: 0;
+  transition: 800ms cubic-bezier(0.19, 1, 0.22, 1) transform;
+  z-index: 100;
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  
+  // display: flex; /* Adding flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  &:after {
+    animation: none;
+    background: #fff;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.card-art {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  width: 72%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+  mask-image: url('../assets/cardmask.png');
+  mask-size: 99%; /* Ensure mask size matches the container size */
+  mask-position: center;
+}
+
+
+
+.cardName {
+  font-family: "Playfair Display", serif;
+  font-size: 1vw; /* Adjust font size as needed */
+  font-weight: 800;
+  letter-spacing: 0.1%;
+  text-align: center;
+  color: #c19c65;
+  
+  /* Absolute positioning */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardText {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.7vw;
+  font-weight: inherit;
+  margin-inline: 10%;
+  text-align: center;
+  color: white;
+  line-height: -189.5cm;
+  padding-top: 100%;
+  
+  }
+
+  .card.hover {
+    .card-face {
+      //box-shadow: inset 0 0 0 0.2em hsla((($hue + 160) / 6), 100%, 40%, 0.75);
+      transform: translateY(10%) rotate(0deg) scale(2.5);
+      transition-duration: 0ms;
+      z-index: 5;
+  
+      &:after {
+        animation: fade 250ms ease-out forwards;
+      }
+    }
+  }
+
+
+
+  //Web
+  $total: 4;
+  @for $i from 0 through ($total - 1) {
+    $hue: (($i / $total) * -360); // x/y * 260 range -90 to -360 
+    $rotationRange: 50;
+    $rotation: ($i - ($total - 1) / 2) / ($total - 2) * $rotationRange;
+    //$rotation: (($rotationRange / 4) * $i ) - 45;
+    $offsetRange: 80;
+    $offset: abs(($i - ($total - 1) / 2) / ($total - 2) * $offsetRange);
+    .card:nth-child(#{$i + 1}) {
+      .card-face {
+      background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image#{$i + 1}.png");
+      background-position: top left, center 4%;
+      border-radius: 5%;
+    
+      
+        
+        
+        // box-shadow: 
+        //   //-5px 5px 5px hsla(0, 0%, 0%, 0.15), 
+        //   inset 0 0 0 0.2em hsla((($hue+160) /6), 100%, 40%, 0.75) ; 
+        
+        transform: translateX($offset * 0.11%) translateY($offset * 0.11%) rotate($rotation * 1deg);
+        transform-origin: center;
+        @if $i % 3 == 0 {
+          transform: translateY($offset * 0.75%) rotate($rotation * 1deg);
+        }
+        .card-label {
+          color: hsla($hue, 100%, 43%, 1);
+          text-shadow: -0.025em  0.025em 0 hsla($hue, 100%, 75%, 1);
+        }
+      }
+      &:hover {
+        .card-face {
+          // box-shadow: 
+          //   //0 10px 20px hsla(0, 0%, 0%, 0.4),
+          //   //inset 0 0 0 2px hsla($hue, 100%, 80%, 0.75);
+          //   inset 0 0 0 0.2em hsla((($hue+160) /6), 100%, 40%, 0.75) ; 
+          // transform: translateY(-10%)  rotate(0deg) scale(1.6);
+          transform: translateY(0%) rotate(0deg) scale(1.5);
+
+          transition-duration: 0ms;
+          z-index: 500;
+          
+          &:after {
+            animation: fade 250ms ease-out forwards;
+          }
+        }
+        &:after {
+          top: -175px;  
+        }
+      }
+    }
+  }
+
+
+ //Mobile
+ $total: 4;
+ $rotationRange: 50;
+ $offsetRange: 80;
+ 
+ @for $i from 0 through ($total - 1) {
+   $hue: (($i / $total) * -360); // x/y * 260 range -90 to -360
+   $rotation: ($i - ($total - 1) / 2) / ($total - 2) * $rotationRange;
+   $offset: abs(($i - ($total - 1) / 2) / ($total - 2) * $offsetRange);
+ 
+   .card:nth-child(#{$i + 1}) {
+     .card-face {
+       background-image: url("../assets/basecard.png");
+       //box-shadow: inset 0 0 0 0.2em hsla((($hue+160) / 6), 100%, 40%, 0.75);
+       transform: translateY($offset * 0.3%) rotate($rotation * 0.5deg);
+       transform-origin: center;
+ 
+       @if $i % 3 == 0 {
+         transform: translateY($offset * 0.3%) rotate($rotation * 0.5deg);
+       }
+ 
+       .card-label {
+         color: hsla($hue, 100%, 43%, 1);
+         text-shadow: -0.025em 0.025em 0 hsla($hue, 100%, 75%, 1);
+       }
+     }
+ 
+     .card-art {
+      
+       background-image: url("../Assets/CardArt/image#{$i + 1}.png");
+     }
+ 
+     &:active .card-face {
+       box-shadow: inset 0 0 0 0.2em hsla((($hue+160) / 6), 100%, 40%, 0.75);
+       transform: translateY(50%) rotate(0deg) scale(2);
+       transition-duration: 0ms;
+       z-index: 5;
+ 
+       &:after {
+         animation: fade 250ms ease-out forwards;
+       }
+     }
+ 
+     &:after {
+       top: -175px;
+     }
+   }
+ }
+ 
+
+@keyframes fade {
+  0% {
+    opacity: 0.9;
+    transform:  scale(1);
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    transform:  scale(1.15);
+    z-index: 5;
+  }
+}
+
+
+@keyframes slide {
+    0% {
+      opacity: 0.9;
+      transform: translate(0vw);
+      
+      z-index: 5;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(100vw);
+      
+      z-index: 5;
+    }
+  }
+
+  @keyframes slideback {
+    0% {
+      opacity: 0;
+      transform: translate(100vw);
+      
+      z-index: 5;
+    }
+    100% {
+      opacity: 0.9;
+      transform: translate(00vw);
+      
+      z-index: 5;
+    }
+  }
+
+    @media screen and (max-width: 375px) and (max-height: 812px) {
+      /* Your styles for smaller screens go here */
+      body {
+        background-image: 80%; /* Adjust the percentage as needed */
+      }
+    }
+
+
+    

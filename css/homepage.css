@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+html,
+body {
+  height: 100%;
+  width: 101vw;
+  box-sizing: border-box;
+  background-image: url("../assets/Floor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* Added this line to center the background image */
+  overflow: hidden;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#custom-cursor {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 15%;
+  z-index: 1000;
+  pointer-events: none; /* Ensure the cursor doesn't interfere with underlying elements */
+}
+#custom-cursor:active {
+  background-position: center top;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1/1;
+}
+
+.cards {
+  bottom: 75%;
+  display: flex;
+  height: 0px;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  scale: 1.5;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    transform: scale(1);
+  }
+}
+.card {
+  height: 18vw;
+  width: auto;
+  aspect-ratio: 4/6;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+  display: flex;
+}
+.card:after {
+  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+}
+
+.card-face {
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: relative; /* Ensure positioning context for absolute positioning */
+  right: 0;
+  top: 0;
+  transition: 800ms cubic-bezier(0.19, 1, 0.22, 1) transform;
+  z-index: 100;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.card-face:after {
+  animation: none;
+  background: #fff;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card-art {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  width: 72%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+  -webkit-mask-image: url("../assets/cardmask.png");
+          mask-image: url("../assets/cardmask.png");
+  -webkit-mask-size: 99%;
+          mask-size: 99%; /* Ensure mask size matches the container size */
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.cardName {
+  font-family: "Playfair Display", serif;
+  font-size: 1vw; /* Adjust font size as needed */
+  font-weight: 800;
+  letter-spacing: 0.1%;
+  text-align: center;
+  color: #c19c65;
+  /* Absolute positioning */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardText {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.7vw;
+  font-weight: inherit;
+  margin-inline: 10%;
+  text-align: center;
+  color: white;
+  line-height: -189.5cm;
+  padding-top: 100%;
+}
+
+.card.hover .card-face {
+  transform: translateY(10%) rotate(0deg) scale(2.5);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+.card.hover .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+
+.card:nth-child(1) .card-face {
+  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image1.png");
+  background-position: top left, center 4%;
+  border-radius: 5%;
+  transform: translateX(6.6%) translateY(6.6%) rotate(-37.5deg);
+  transform-origin: center;
+  transform: translateY(45%) rotate(-37.5deg);
+}
+.card:nth-child(1) .card-face .card-label {
+  color: hsl(0, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(0, 100%, 75%);
+}
+.card:nth-child(1):hover .card-face {
+  transform: translateY(0%) rotate(0deg) scale(1.5);
+  transition-duration: 0ms;
+  z-index: 500;
+}
+.card:nth-child(1):hover .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(1):hover:after {
+  top: -175px;
+}
+
+.card:nth-child(2) .card-face {
+  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image2.png");
+  background-position: top left, center 4%;
+  border-radius: 5%;
+  transform: translateX(2.2%) translateY(2.2%) rotate(-12.5deg);
+  transform-origin: center;
+}
+.card:nth-child(2) .card-face .card-label {
+  color: hsl(270, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(270, 100%, 75%);
+}
+.card:nth-child(2):hover .card-face {
+  transform: translateY(0%) rotate(0deg) scale(1.5);
+  transition-duration: 0ms;
+  z-index: 500;
+}
+.card:nth-child(2):hover .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(2):hover:after {
+  top: -175px;
+}
+
+.card:nth-child(3) .card-face {
+  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image3.png");
+  background-position: top left, center 4%;
+  border-radius: 5%;
+  transform: translateX(2.2%) translateY(2.2%) rotate(12.5deg);
+  transform-origin: center;
+}
+.card:nth-child(3) .card-face .card-label {
+  color: hsl(180, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(180, 100%, 75%);
+}
+.card:nth-child(3):hover .card-face {
+  transform: translateY(0%) rotate(0deg) scale(1.5);
+  transition-duration: 0ms;
+  z-index: 500;
+}
+.card:nth-child(3):hover .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(3):hover:after {
+  top: -175px;
+}
+
+.card:nth-child(4) .card-face {
+  background-image: url("../BaseCard2.png"), url("./Assets/CardArt/image4.png");
+  background-position: top left, center 4%;
+  border-radius: 5%;
+  transform: translateX(6.6%) translateY(6.6%) rotate(37.5deg);
+  transform-origin: center;
+  transform: translateY(45%) rotate(37.5deg);
+}
+.card:nth-child(4) .card-face .card-label {
+  color: hsl(90, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(90, 100%, 75%);
+}
+.card:nth-child(4):hover .card-face {
+  transform: translateY(0%) rotate(0deg) scale(1.5);
+  transition-duration: 0ms;
+  z-index: 500;
+}
+.card:nth-child(4):hover .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(4):hover:after {
+  top: -175px;
+}
+
+.card:nth-child(1) .card-face {
+  background-image: url("../assets/basecard.png");
+  transform: translateY(18%) rotate(-18.75deg);
+  transform-origin: center;
+  transform: translateY(18%) rotate(-18.75deg);
+}
+.card:nth-child(1) .card-face .card-label {
+  color: hsl(0, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(0, 100%, 75%);
+}
+.card:nth-child(1) .card-art {
+  background-image: url("../Assets/CardArt/image1.png");
+}
+.card:nth-child(1):active .card-face {
+  box-shadow: inset 0 0 0 0.2em hsla(26.6666666667, 100%, 40%, 0.75);
+  transform: translateY(50%) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+.card:nth-child(1):active .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(1):after {
+  top: -175px;
+}
+
+.card:nth-child(2) .card-face {
+  background-image: url("../assets/basecard.png");
+  transform: translateY(6%) rotate(-6.25deg);
+  transform-origin: center;
+}
+.card:nth-child(2) .card-face .card-label {
+  color: hsl(270, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(270, 100%, 75%);
+}
+.card:nth-child(2) .card-art {
+  background-image: url("../Assets/CardArt/image2.png");
+}
+.card:nth-child(2):active .card-face {
+  box-shadow: inset 0 0 0 0.2em hsla(11.6666666667, 100%, 40%, 0.75);
+  transform: translateY(50%) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+.card:nth-child(2):active .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(2):after {
+  top: -175px;
+}
+
+.card:nth-child(3) .card-face {
+  background-image: url("../assets/basecard.png");
+  transform: translateY(6%) rotate(6.25deg);
+  transform-origin: center;
+}
+.card:nth-child(3) .card-face .card-label {
+  color: hsl(180, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(180, 100%, 75%);
+}
+.card:nth-child(3) .card-art {
+  background-image: url("../Assets/CardArt/image3.png");
+}
+.card:nth-child(3):active .card-face {
+  box-shadow: inset 0 0 0 0.2em hsla(356.6666666667, 100%, 40%, 0.75);
+  transform: translateY(50%) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+.card:nth-child(3):active .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(3):after {
+  top: -175px;
+}
+
+.card:nth-child(4) .card-face {
+  background-image: url("../assets/basecard.png");
+  transform: translateY(18%) rotate(18.75deg);
+  transform-origin: center;
+  transform: translateY(18%) rotate(18.75deg);
+}
+.card:nth-child(4) .card-face .card-label {
+  color: hsl(90, 100%, 43%);
+  text-shadow: -0.025em 0.025em 0 hsl(90, 100%, 75%);
+}
+.card:nth-child(4) .card-art {
+  background-image: url("../Assets/CardArt/image4.png");
+}
+.card:nth-child(4):active .card-face {
+  box-shadow: inset 0 0 0 0.2em hsla(341.6666666667, 100%, 40%, 0.75);
+  transform: translateY(50%) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+.card:nth-child(4):active .card-face:after {
+  animation: fade 250ms ease-out forwards;
+}
+.card:nth-child(4):after {
+  top: -175px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+    z-index: 5;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0.9;
+    transform: translate(0vw);
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100vw);
+    z-index: 5;
+  }
+}
+@keyframes slideback {
+  0% {
+    opacity: 0;
+    transform: translate(100vw);
+    z-index: 5;
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(0vw);
+    z-index: 5;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 812px) {
+  /* Your styles for smaller screens go here */
+  body {
+    background-image: 80%; /* Adjust the percentage as needed */
+  }
+}/*# sourceMappingURL=homepage.css.map */
