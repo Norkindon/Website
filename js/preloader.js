@@ -1,6 +1,5 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Hide the preloader when the page is fully loaded
+window.onload = function() {
+    // Hide the preloader when all resources are loaded
     var preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
-    });
+};
