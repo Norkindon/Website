@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
         setTimeout(function() {
             preloader.style.display = 'none';
         }, 500);
-    }, 5000);
+    });
 
     var updateProgressBar = function() {
         var progress = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)) * 100;
