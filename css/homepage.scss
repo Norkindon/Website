@@ -289,7 +289,7 @@ body {
  
      .card-art {
       
-       background-image: url("../Assets/CardArt/image#{$i + 1}.png");
+       background-image: url("../assets/CardArt/image#{$i + 1}.png");
      }
  
      &:active .card-face {
