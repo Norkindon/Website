@@ -12,9 +12,11 @@ window.addEventListener("load", function() {
 
     var updateProgressBar = function() {
         var progress = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)) * 100;
+        console.log('Progress:', progress);
         progressBar.style.width = progress + '%';
         progressPercent.innerText = Math.round(progress) + '%';
     };
+    
 
     window.addEventListener('scroll', updateProgressBar);
     window.addEventListener('resize', updateProgressBar);
