@@ -35,8 +35,11 @@ logotext.classList.add('logotext');
 const h1Element = document.createElement('h1');
 h1Element.textContent = 'NICK BIXLER';
 h1Element.onclick = function() {
-    window.location.href = '../index.html';
+    if (window.location.href.indexOf('index.html') === -1) {
+        window.location.href = '../index.html';
+    }
 };
+
 h1Element.style.transition = 'color 0.3s ease'; // Apply transition to the created element
 h1Element.style.transition = 'scale 0.3s ease'; // Apply transition to the created element
 
@@ -57,5 +60,12 @@ headerDiv.appendChild(h1Element);
 document.body.appendChild(headerDiv);
 
 
+
+
 //extra
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide the preloader when the page is fully loaded
+    var preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+    });
