@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const cursorContainer = document.getElementById('cursor-container');
   const followMouse = document.getElementById('custom-cursor');
-  let fingerhand = 'assets/hand/fingerhand.png';
-  let fingerhandclicked = 'url("assets/hand/fingerhandclicked.png")';
+  let fingerhand = '../assets/hand/fingerhand.png';
+  let fingerhandclicked = 'url("../assets/hand/fingerhandclicked.png")';
 
   // Function to set cursor size based on screen dimensions
   function setCursorSize() {
@@ -16,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to update cursor position based on mouse or touch coordinates
   function updateCursorPosition(x, y) {
     setCursorSize();
-    followMouse.style.left = x - followMouse.offsetWidth / 6 + 'px';
-    followMouse.style.top = y + 'px';
+    followMouse.style.left = x - followMouse.offsetWidth / 2.4 + 'px';
+    cursorContainer.style.top = y + 'px';
   }
 
   // Mouse move event
@@ -64,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Resize event listener to update cursor size on window resize
   window.addEventListener('resize', setCursorSize);
 });
+
+
 
 
 // var x;
@@ -123,3 +126,5 @@ document.addEventListener('DOMContentLoaded', function () {
 //       $card.addClass("animated");
 //     },2500);
 //   });
+
+

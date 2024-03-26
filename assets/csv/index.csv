@@ -1,0 +1,5 @@
+pagename,cardtext,art,hreflink
+About Me, "<br> A multi-media artist based in Tbilisi, Georgia", ../CardArt/image1.png, pages/aboutme.html
+Portfolio, "br> See what I have done.", ../CardArt/image2.png, pages/portfolio.html
+Shop & Services, "<br> See what I have to offer. <br> Things for sale. <br> Things long sold.", ../CardArt/image3.png, pages/shop.html
+Contact Me, "<br> NexBexel@outlook.com <br> <br>+599514325", ../CardArt/image4.png, pages/contactme.html

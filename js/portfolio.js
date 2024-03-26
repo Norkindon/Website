@@ -7,7 +7,7 @@ const swiper = new Swiper(".swiper", {
     speed: 1500,
     slidesPerView: 4,
     spaceBetween: 60,
-    mousewheel: true,
+    mousewheel: false,
     parallax: true,
     centeredSlides: true,
     effect: "coverflow",
@@ -20,9 +20,7 @@ const swiper = new Swiper(".swiper", {
     //   pauseOnMouseEnter: true
     // },
     autoplay: false, // Disable autoplay
-    scrollbar: {
-        el: ".swiper-scrollbar"
-    },
+   
     breakpoints: {
         0: {
             slidesPerView: 1,

@@ -15,12 +15,13 @@
   position: relative;
   width: 100px;
   height: 100px;
+  transform: translateY(300px);
 }
 
 #loader {
   border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 8px solid #3498db;
+  border-top: 8px solid #b39d24;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
@@ -32,7 +33,7 @@
   left: 0;
   width: 0%;
   height: 5px;
-  background-color: #3498db;
+  background-color: #b39d24;
 }
 
 #progress-percent {
@@ -41,7 +42,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
-  color: #3498db;
+  color: #b39d24;
 }
 
 @keyframes spin {

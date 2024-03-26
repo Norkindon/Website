@@ -7,97 +7,122 @@
   src: url("../assets/fonts/Aceking.woff") format("woff");}
 
 
-.header {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Allow the width to adjust based on the content */
-    height: 100px;
-    background-image: url("../assets/header/header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    color: #f7f7f7;
-    z-index: 500;
+    width: 100%; /* Allow the width to adjust based on the content */
+    height: 4em;
+    // background-image: url("../assets/header/header.png");
+    // // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center top;
+    background-color: rgb(29, 29, 29);
+    z-index: 50000;
     overflow: hidden;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  }
+    // mix-blend-mode: luminosity;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .3s;
+  //   &.small {
+  //     height: 70px;
+  //     box-shadow: 0 0 5px rgba(black, .2);
+  //     // when header.small also change page offset
+  // }
+}
+  
   
   .header h1 {
+    width: 10em;
+    height: 1.2em;
     font-size: 200%;
+    z-index: 661;
     font-weight: normal;
     text-align: center;
-    font-family: 'Ariel';
-    //font-family: 'Aceking';
-    font-weight: bold;
-    
-    //text-shadow: 0px 0px 5px rgba(155, 153, 153, 0.8);  
-    
-    //font-family: 'Times New Roman', Times, serif;
-    z-index: 661;
-    
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #9d8353;
+    box-shadow: rgba(3, 3, 3, 0);
+    transition: color 1s ease, font-size 0.3s ease, font-style 0.3s ease, box-shadow 0.3s ease;
   }
-  h1:hover {
-    color: #3336e6;
-    transition: color 0.3s ease;
-    scale: 1.1;
   
-    
-}
+  .header h1:hover {
+    color: rgba(238, 238, 238, 0); /* Fade to transparent */
+    transition-delay: 0s, 0s, 0s, 0s; /* Reset transition delays */
+    animation: fadeInToColor 1.3s ease forwards;
+  }
+  
+  @keyframes fadeInToColor {
+    0% {
+      font-weight: normal;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: normal;
+      color: #9d8353;
+     
+    }
+    50% {
+      color: rgba(238, 238, 238, 0);
+      font-style: normal;
+    }
+    100% {
+      color: #eeeeee; /* Transition to hover color */
+      font-size: 240%;
+      font-style: oblique;
+    }
+  }
+  
 
 
-
-  /* Second Header */
-  .headerR {
-    position: fixed;
-    top: 0;
-    right: 0; /* Anchor to the right side of the page */
-    width: 1920px; /* Allow the width to adjust based on the content */
-    height: 100px; /* Ensure the image covers the full height of the viewport */
-    background-image: url("../assets/header/headerR.png");
-    background-repeat: no-repeat;
-    background-size: contain; /* Maintain aspect ratio */
-    background-position: top right; /* Anchor the image to the top right corner */
-    color: #f7f7f7;
-    z-index: 511;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // /* Second Header */
+  // .headerR {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   width: 100%; 
+  //   height: 4em; 
+  //   background-image: url("../assets/header/headerR.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain; 
+  //   background-position: top right; 
+  //   z-index: 511;
+  //   overflow: hidden;
+  //   text-align: center;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
    
-  }
+  // }
   
-  .headerL {
-    position: fixed;
-    top: 0;
-    left: 0; /* Anchor to the right side of the page */
-    width: 1920px; /* Allow the width to adjust based on the content */
-    height: 100px; /* Ensure the image covers the full height of the viewport */
-    background-image: url("../assets/header/headerL.png");
-    background-repeat: no-repeat;
-    background-size: contain; /* Maintain aspect ratio */
-    background-position: top left; /* Anchor the image to the top right corner */
-    color: #f7f7f7;
-    z-index: 510;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // .headerL {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0; 
+  //   width: 100%; 
+  //   height: 4em; 
+  //   background-image: url("../assets/header/headerL.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain; /* Maintain aspect ratio */
+  //   background-position: top left; /* Anchor the image to the top right corner */
+ 
+  //   z-index: 510;
+  //   overflow: hidden;
+  //   text-align: center;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
     
-  }
+  // }
   
   .logotext{
     display: flex;
     flex-direction: row;
     position: absolute;
     align-items: center;
-    
+   
   }
   
   
@@ -110,17 +135,12 @@
     height: 3em;
     width: 3em;
     padding-right: 1em;
+    position: absolute;
+    transform: translateX(-145px);
+    
     
 
   }
 
-
-
-
-
-
-
-
-  // extra
 
   

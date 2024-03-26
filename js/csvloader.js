@@ -63,11 +63,11 @@
 
             const continueReadingLink = document.createElement('a');
             continueReadingLink.href = 'javascript:void(0);';
-            continueReadingLink.title = 'Continue Reading';
+            continueReadingLink.title = 'Expand';
             continueReadingLink.setAttribute('data-swiper-parallax', '80');
             continueReadingLink.setAttribute('data-swiper-parallax-opacity', '0.2');
             continueReadingLink.setAttribute('data-swiper-parallax-duration', '1750');
-            continueReadingLink.textContent = 'Continue Reading';
+            continueReadingLink.textContent = 'Expand';
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
