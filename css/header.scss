@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Aceking";
-  src: url("../assets/fonts/Aceking.woff") format("woff");}
+  src: url("/assets/fonts/Aceking.woff") format("woff");}
 
 
   .header {
@@ -13,7 +13,7 @@
     left: 0;
     width: 100%; /* Allow the width to adjust based on the content */
     height: 4em;
-    // background-image: url("../assets/header/header.png");
+    // background-image: url("/assets/header/header.png");
     // // background-repeat: no-repeat;
     // background-size: cover;
     // background-position: center top;
@@ -84,7 +84,7 @@
   //   right: 0;
   //   width: 100%; 
   //   height: 4em; 
-  //   background-image: url("../assets/header/headerR.png");
+  //   background-image: url("/assets/header/headerR.png");
   //   background-repeat: no-repeat;
   //   background-size: contain; 
   //   background-position: top right; 
@@ -103,7 +103,7 @@
   //   left: 0; 
   //   width: 100%; 
   //   height: 4em; 
-  //   background-image: url("../assets/header/headerL.png");
+  //   background-image: url("/assets/header/headerL.png");
   //   background-repeat: no-repeat;
   //   background-size: contain; /* Maintain aspect ratio */
   //   background-position: top left; /* Anchor the image to the top right corner */
@@ -128,7 +128,7 @@
   
   .logo {
   
-    background-image: url("../assets/logo1.png");
+    background-image: url("/assets/logo1.png");
     background-repeat: no-repeat;
     background-size: contain; /* Maintain aspect ratio */
     background-position: center; /* Anchor the image to the top right corner */
