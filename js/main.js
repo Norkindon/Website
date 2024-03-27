@@ -21,7 +21,7 @@ const loader = new GLTFLoader();
 const objToRender = 'knightme';
 let object, mixer;
 loader.load(
-    `../models/${objToRender}/scene.gltf`,
+    `./models/${objToRender}/scene.gltf`,
     function (gltf) {
         object = gltf.scene;
         scene.add(object);

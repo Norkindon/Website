@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const cursorContainer = document.getElementById('cursor-container');
   const followMouse = document.getElementById('custom-cursor');
-  let fingerhand = '../assets/hand/fingerhand.png';
-  let fingerhandclicked = 'url("../assets/hand/fingerhandclicked.png")';
+  let fingerhand = './assets/hand/fingerhand.png';
+  let fingerhandclicked = 'url("./assets/hand/fingerhandclicked.png")';
 
   // Function to set cursor size based on screen dimensions
   function setCursorSize() {

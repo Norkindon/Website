@@ -119,7 +119,7 @@
     }
 
     // Fetching CSV file
-    fetch('../assets/csv/artportfolio.csv')
+    fetch('./assets/csv/artportfolio.csv')
         .then(response => response.text())
         .then(data => {
             // Data is retrieved, now create HTML content

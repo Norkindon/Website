@@ -69,7 +69,7 @@ function createCards(data) {
 
 // Fetch the CSV and create cards when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    fetchCSV('../assets/csv/index.csv')
+    fetchCSV('./assets/csv/index.csv')
         .then(data => {
             createCards(data);
         })

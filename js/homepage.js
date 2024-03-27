@@ -381,7 +381,7 @@ window.onload = function () {
   var fontSize = 1; // Initial font size
 
 
-  fetch('../assets/text/aboutme.txt') // Adjust the URL to navigate one folder back and then into assets/text/
+  fetch('./assets/text/aboutme.txt') // Adjust the URL to navigate one folder back and then into assets/text/
     .then(response => response.text())
     .then(data => {
       textContainer.textContent = data; // Set the text content of the container
