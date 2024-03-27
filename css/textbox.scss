@@ -22,7 +22,7 @@
     transform: translate(-25%, -50%);
     height: calc(100% - 50px); /* Subtract 50px from the height */
     width: 100%;
-    // background-image: url("/assets/frame/backcanvasdithered3.png");
+    // background-image: url("../assets/frame/backcanvasdithered3.png");
     background-color: rgb(0, 0, 0);
     color: aliceblue;
   
@@ -60,7 +60,7 @@
     .corner-#{$i} {
         width: $size; // Set the width of the corner
         height: $size; // Set the height of the corner
-        background-image: url("/assets/frame/c#{$i}.png");
+        background-image: url("../assets/frame/c#{$i}.png");
         position: absolute;
 
         // Adjust positioning based on corner number
@@ -91,7 +91,7 @@ $centerIt: calc(100% - $divSize);
     position: fixed;
     width: if($position == "left" or $position == "right", $divSize, 100%);
     height: if($position == "top" or $position == "bottom", $divSize, 100%);
-    background-image: if($iteration % 2 == 1, url("/assets/frame/frame3.png"), url("/assets/frame/frame4.png"));
+    background-image: if($iteration % 2 == 1, url("../assets/frame/frame3.png"), url("../assets/frame/frame4.png"));
 
     background-size: contain;
     z-index: -1;

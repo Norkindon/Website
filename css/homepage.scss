@@ -161,7 +161,7 @@ section {
 
 .floorbox {
   box-sizing: border-box;
-  background-image: url("/assets/Floor.png");
+  background-image: url("../assets/Floor.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; /* Added this line to center the background image */
@@ -198,7 +198,7 @@ canvas {
   position: relative;
   bottom: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('/assets/Interior.png');
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('../assets/Interior.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -210,7 +210,7 @@ canvas {
 .greenblock {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/gallery2.png");
+  background-image: url("../assets/gallery2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -441,7 +441,7 @@ canvas {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 100;
-  mask-image: url("/assets/cardmask.png");
+  mask-image: url("../assets/cardmask.png");
   mask-size: 99%; /* Ensure mask size matches the container size */
   mask-position: center;
 }
@@ -499,7 +499,7 @@ $hoverMove: -150px;
 
   .card:nth-child(#{$i + 1}) {
     .card-face {
-      background-image: url("/assets/basecard.png");
+      background-image: url("../assets/basecard.png");
       //box-shadow: inset 0 0 0 0.2em hsla((($hue+160) / 6), 100%, 40%, 0.75);
       transform-origin: center;
       transform: translateY($offset * 0.3%) rotate($rotation * 0.5deg);
@@ -517,7 +517,7 @@ $hoverMove: -150px;
     }
 
     .card-art {
-      background-image: url("/assets/CardArt/image#{$i + 1}.png");
+      background-image: url("../assets/CardArt/image#{$i + 1}.png");
     }
 
     &:active .card-face {
@@ -687,7 +687,7 @@ $hoverMove: -150px;
 //     .bubble {
 //       position: absolute;
 //       left: var(--position, 50%);
-//       background-image: url("/assets/frame/backcanvasdithered3.png");
+//       background-image: url("../assets/frame/backcanvasdithered3.png");
       
       
 //       border-radius: 100%;
@@ -710,8 +710,8 @@ $hoverMove: -150px;
 //     grid-template-columns: 1fr auto;
 //     grid-gap: 4rem;
 //     padding: 2rem;
-//     // background-image: url("/assets/frame/backcanvasdithered3.png");
-//     background-image: url("/assets/contactme1.png");
+//     // background-image: url("../assets/frame/backcanvasdithered3.png");
+//     background-image: url("../assets/contactme1.png");
 //     background-size: contain;
 //     background-repeat: no-repeat;
 //     position: absolute;
@@ -949,7 +949,7 @@ button:nth-child(2) {
 
 
 .productImg {
-  background-image: url("/assets/shop/clothes/crewneck1.png");
+  background-image: url("../assets/shop/clothes/crewneck1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
@@ -1095,11 +1095,11 @@ $contactSize: 1000px;
 }
 
 .phone{
-  background-image: url("/assets/footer/phone.png");
+  background-image: url("../assets/footer/phone.png");
 }
 
 .email{
-  background-image: url("/assets/footer/email2.png");
+  background-image: url("../assets/footer/email2.png");
 }
 
 @media screen and (max-width: 768px) {
@@ -1269,7 +1269,7 @@ $contactSize: 1000px;
     // top: -50%;
     width: 60%;
     height: 60%;
-    // background-image: url("/assets/Interior.png");
+    // background-image: url("../assets/Interior.png");
     //background-image:linear-gradient(90deg, #f6ad55 1%, rgba(244, 150, 62, 0.75) 25.75%, rgba(242, 125, 45, 0.5) 50.5%, rgba(255, 0, 0, 0) 100%), radial-gradient(100% 100% at 10% 100%, #fdd575 0%, #f7ab71 14.29%, #ee7f79 28.57%, #de4e8b 42.86%, #a24789 57.14%, #6d3c75 71.43%, #1a202c 100%);
     background-size: cover;
     background-position: bottom center;
@@ -1287,7 +1287,7 @@ $contactSize: 1000px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-image: url("/assets/basecard4.png");
+  background-image: url("../assets/basecard4.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; /* Stretch to cover */
   border-radius: 7px;
@@ -1336,8 +1336,8 @@ $contactSize: 1000px;
         padding: 0;
         width: $image-scale;
         height: $image-scale;
-        background-image: url('/assets/frame/c#{$i}.png');
-        // background-image: url("/assets/frame/c4.png");
+        background-image: url('../assets/frame/c#{$i}.png');
+        // background-image: url("../assets/frame/c4.png");
         background-size: contain;
         background-repeat: no-repeat;
        
@@ -1385,20 +1385,20 @@ $contactSize: 1000px;
     transition: all 0.3s ease;
 }
 
-// .swiper .swiper-slide:hover {
-//     // background: linear-gradient(
-//     //     135deg,
-//     //     #ebd197,
-//     //     #b48811,
-//     //     #a2790d,
-//     //     #bb9b49
-//     // );
+.swiper .swiper-slide:hover {
+    // background: linear-gradient(
+    //     135deg,
+    //     #ebd197,
+    //     #b48811,
+    //     #a2790d,
+    //     #bb9b49
+    // );
     
 
 
 
     
-// }
+}
 
 .swiper .swiper-slide:hover::before,
 .swiper .swiper-slide:hover::after {
@@ -1411,7 +1411,7 @@ $contactSize: 1000px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    // background-image: url("/assets/basetop2.png");
+    // background-image: url("../assets/basetop2.png");
     
     border-radius: 7px;
     padding: 20px;
