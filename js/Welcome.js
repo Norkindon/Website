@@ -15,7 +15,7 @@ function applyParticleEffectToFloorBox() {
 
   let mouseX = 0,
     mouseY = 0,
-    mouseRadius = 200,
+    mouseRadius = window.innerWidth / 5, 
     mousePower = 15,
     particleDensity = 3,
     particleStiffness = 0.01,
