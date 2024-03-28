@@ -37,11 +37,11 @@ h1Element.style.transition = 'color 0.3s ease'; // Apply transition to the creat
 h1Element.style.transition = 'scale 0.3s ease'; // Apply transition to the created element
 
 
-const logo = document.createElement('div');
-logo.classList.add('logo');
+// const logo = document.createElement('div');
+// logo.classList.add('logo');
 
-// Append elements to header div
-headerDiv.appendChild(logo);
+// // Append elements to header div
+// headerDiv.appendChild(logo);
 // headerDiv.appendChild(headerRDiv);
 // headerDiv.appendChild(headerLDiv);
 headerDiv.appendChild(logotext);

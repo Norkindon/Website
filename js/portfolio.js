@@ -5,7 +5,7 @@ const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
     speed: 1500,
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 60,
     mousewheel: false,
     parallax: true,
@@ -15,11 +15,11 @@ const swiper = new Swiper(".swiper", {
         rotate: 40,
         slideShadows: true
     },
-    // autoplay: {
-    //   delay: 2000,
-    //   pauseOnMouseEnter: true
-    // },
-    autoplay: false, // Disable autoplay
+    autoplay: {
+      delay: 5000,
+      pauseOnMouseEnter: true
+    },
+    autoplay: true, // Disable autoplay
    
     breakpoints: {
         0: {
