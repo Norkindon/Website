@@ -10,6 +10,59 @@
   background-color: black;
 }
 
+.textpaper {
+  width: 50vw;
+  height: 50vw;
+  background-image: url("../assets/paperback.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-content: center;
+  display: grid;
+  justify-content: center;
+  top: 30%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+#text-container {
+  font-family: Papyrus;
+  position: relative;
+  color: #fff;
+  font-size: 1.6vw;
+  text-shadow: 1px 1px 2px black;
+  -webkit-text-shadow: 1px 1px 2px black;
+  -moz-text-shadow: 1px 1px 2px black;
+  width: 74.8%;
+  left: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .textpaper {
+    width: 50vw;
+    height: 50vw;
+    background-image: url("../assets/paperback.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: center;
+    display: grid;
+    justify-content: center;
+    top: 30%;
+    position: absolute;
+    transform: translateY(-16%) translateX(-31%) rotate(90deg) scale(2);
+  }
+  #text-container {
+    font-family: Papyrus;
+    position: relative;
+    color: #fff;
+    font-size: 1.6vw;
+    text-shadow: 1px 1px 2px black;
+    -webkit-text-shadow: 1px 1px 2px black;
+    -moz-text-shadow: 1px 1px 2px black;
+    width: 30.5%;
+    left: 33.3%;
+    transform: rotate(-90deg);
+  }
+}
 .textbox {
   /* Define the styles for the centered div */
   position: absolute;
@@ -20,21 +73,6 @@
   width: 100%;
   background-color: rgb(0, 0, 0);
   color: aliceblue;
-}
-
-#text-container {
-  font-family: "Playfair Display", serif;
-  height: 85%;
-  position: absolute;
-  color: aliceblue;
-  transform: translateY(35px);
-  padding-top: 3em;
-  font-size: calc((1vh + 1vw) / 0.8);
-  text-align: left;
-  width: 70%;
-  text-shadow: 1px 1px 2px black;
-  -webkit-text-shadow: 1px 1px 2px black;
-  -moz-text-shadow: 1px 1px 2px black;
 }
 
 .corner-1 {

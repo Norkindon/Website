@@ -503,3 +503,10 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'https://www.linkedin.com/'; // Replace this with your LinkedIn URL
   });
 });
+
+
+
+
+
+
+//music

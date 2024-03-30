@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to update cursor position based on mouse or touch coordinates
   function updateCursorPosition(x, y) {
     setCursorSize();
-    followMouse.style.left = x - followMouse.offsetWidth / 2.4 + 'px';
-    cursorContainer.style.top = y + 'px';
+    // Animate cursor movement using GSAP
+    TweenMax.to(cursorContainer, 3, { left: x - followMouse.offsetWidth / 2.4, top: y });
   }
 
   // Mouse move event
@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Resize event listener to update cursor size on window resize
   window.addEventListener('resize', setCursorSize);
 });
-
 
 
 

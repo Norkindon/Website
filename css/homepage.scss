@@ -20,9 +20,32 @@ body {
   scrollbar-width: none;
   overflow-x: hidden;
 }
+.blockbox {
+  position: absolute;
+  top: 4em;
+  background-color: #1c1c1c;
+  height: 10%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 0px 0px 14px 14px;
+}
+
+.blockname {
+  font-size: calc((1vw + 1vh) / 0.4);
+  color: #9d8353;
+  text-align: center;
+  font-family: "playfair display";
+}
+
+
 .footer {
   scroll-snap-align: end; /* Snap the footer to the end of the container */
 }
+
+
 
 body::-webkit-scrollbar {
   display: none;
@@ -92,9 +115,9 @@ position: relative;
   z-index: 1;
 top: 0;
 left: 0;
--webkit-transform: translate3d(0, 0, 0);
--moz-transform: translate3d(0, 0, 0);
-transform: translate3d(0, 0, 0);
+-webkit-transform: translate3d(0, -10vh, 0);
+-moz-transform: translate3d(0, -10vh, 0);
+transform: translate3d(0, -10vh, 0);
 --webkit-backface-visibility: hidden;
 --webkit-perspective: 1000;
   
@@ -207,12 +230,15 @@ canvas {
   
 }
 
+
+
 .greenblock {
   width: 100%;
   height: 100%;
   background-image: url("../assets/gallery2.png");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .blueblock {
@@ -476,7 +502,7 @@ canvas {
 .card.hover {
   .card-face {
     //box-shadow: inset 0 0 0 0.2em hsla((($hue + 160) / 6), 100%, 40%, 0.75);
-    transform: translateY(10%) rotate(0deg) scale(2.5);
+    transform: translateY(10vh) rotate(0deg) scale(2.5);
     transition-duration: 0ms;
     z-index: 5;
 
@@ -490,7 +516,7 @@ $total: 4;
 $rotationRange: 50;
 $offsetRange: 80;
 
-$hoverMove: -150px;
+$hoverMove: -10vh;
 
 @for $i from 0 through ($total - 1) {
   $hue: (($i / $total) * -360); // x/y * 260 range -90 to -360
@@ -1011,8 +1037,14 @@ $contactSize: 1000px;
   position: relative;
   width: 100%;
   background-color: black;
+  background-image: url("../assets/footer/desktop2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  bottom: 0;
   justify-content: space-between; /* This property aligns items on opposite ends */
   color: #ffffff;
+  min-width: 100%;
   
 }
 
@@ -1569,3 +1601,50 @@ $contactSize: 1000px;
         width: 320%;
     }
 }
+
+
+
+.musicblock {
+  width: 100%;
+  height: 100%;
+  background-color: #303030;
+  background-image: url("../assets/album.bmp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 10%; 
+  
+  max-width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+}
+
+
+
+.bandcamp {
+
+}
+
+
+
+.grain {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  background: url("../assets/grain.gif");
+  opacity: .15;
+  z-index: 99999999999999999999999999999999999999;
+}
+
+// .albumart {
+//   width: 100%;
+//   height: 100%;
+//   background-image: url("https://f4.bcbits.com/img/a3694144594_10.jpg");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
