@@ -1,9 +1,23 @@
 // @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 // @import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Ojuju:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Fondamento:ital@0;1&family=Mrs+Saint+Delafield&family=Ojuju:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+// @import url("https://db.onlinewebfonts.com/c/6211209062fecb7a46ec1a6b7de5dfa1?family=Nimbus_Sans_Becker_D_Bold_Italic"); 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Fondamento:ital@0;1&family=Imbue:opsz,wght@10..100,100..900&family=Mrs+Saint+Delafield&family=Ojuju:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url("https://db.onlinewebfonts.com/c/6211209062fecb7a46ec1a6b7de5dfa1?family=Nimbus_Sans_Becker_D_Bold_Italic"); 
+@import url('https://fonts.cdnfonts.com/css/optihollandselight-agency'); 
+@import url('https://fonts.cdnfonts.com/css/seeds-of-yesterday');
+@import url('https://fonts.cdnfonts.com/css/globoface-gothic-display-2001');
+@import url('https://fonts.cdnfonts.com/css/rose-quay');
+
+
+
+
+$blocknamefont: 'Rose Quay', sans-serif;
+
+
+
+
+
+
 html,
 body {
   height: 100%;
@@ -22,22 +36,31 @@ body {
 }
 .blockbox {
   position: absolute;
-  top: 4em;
+  top: 3.3em;
   background-color: #1c1c1c;
+  // mask-image: url("../assets/dither.bmp");
+  // mask-position: center;
+  
+// background-image: url("../assets/dither.png");
+background-position: center;
   height: 10%;
   width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  border-radius: 0px 0px 14px 14px;
+  border-radius: 14px;
+  background-size: cover;
+  background-image: inherit;
 }
 
 .blockname {
   font-size: calc((1vw + 1vh) / 0.4);
-  color: #9d8353;
+  // color: #9d8353;
+  color: whitesmoke;
   text-align: center;
-  font-family: "playfair display";
+  //font-family: "playfair display";
+  font-family: $blocknamefont;
 }
 
 
@@ -516,7 +539,7 @@ $total: 4;
 $rotationRange: 50;
 $offsetRange: 80;
 
-$hoverMove: -10vh;
+$hoverMove: -15vh;
 
 @for $i from 0 through ($total - 1) {
   $hue: (($i / $total) * -360); // x/y * 260 range -90 to -360
@@ -548,9 +571,16 @@ $hoverMove: -10vh;
 
     &:active .card-face {
       box-shadow: inset 0 0 0 0.2em hsla((($hue + 160) / 6), 100%, 40%, 0.75);
-      transform: translateY(50%) rotate(0deg) scale(2);
+      // transform: translateY(0%) rotate(0deg) scale(1.5);
+      // transform: translateY($hoverMove) ;
       transition-duration: 0ms;
       z-index: 500;
+      @media screen and (max-width: 400px) {
+          transform: translateY(-12VW) ;
+
+
+ 
+        }
 
       &:after {
         animation: fade 250ms ease-out forwards;
@@ -576,6 +606,18 @@ $hoverMove: -10vh;
         // display: none;
         transition-duration: 0ms;
         z-index: 500;
+
+
+        @media screen and (max-width: 400px) {
+          transform: translateY(-12VW) ;
+
+
+ 
+        }
+        @media screen and (max-width: 700px) {
+          
+ 
+        }
 
         &:after {
           animation: fade 250ms ease-out forwards;
@@ -634,7 +676,7 @@ $hoverMove: -10vh;
 }
 
 @media screen and (max-width: 375px) and (max-height: 812px) {
-  /* Your styles for smaller screens go here */
+
   body {
     background-image: 80%; /* Adjust the percentage as needed */
   }
@@ -1417,20 +1459,16 @@ $contactSize: 1000px;
     transition: all 0.3s ease;
 }
 
-.swiper .swiper-slide:hover {
-    // background: linear-gradient(
-    //     135deg,
-    //     #ebd197,
-    //     #b48811,
-    //     #a2790d,
-    //     #bb9b49
-    // );
+// .swiper .swiper-slide:hover {
+//     // background: linear-gradient(
+//     //     135deg,
+//     //     #ebd197,
+//     //     #b48811,
+//     //     #a2790d,
+//     //     #bb9b49
+//     // );
     
-
-
-
-    
-}
+// }
 
 .swiper .swiper-slide:hover::before,
 .swiper .swiper-slide:hover::after {
@@ -1625,9 +1663,9 @@ $contactSize: 1000px;
 
 
 
-.bandcamp {
+  // .bandcamp {
 
-}
+  // }
 
 
 
@@ -1648,3 +1686,103 @@ $contactSize: 1000px;
 //   background-size: contain;
 //   background-repeat: no-repeat;
 // }
+
+
+
+//IMAGEOVERLAY
+
+.imageoverlay {
+  width: 80%;
+  height: 80%;
+  z-index: 100001;
+  position: fixed;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  left: 30%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 50%;
+  /* Other styles as needed */
+}
+
+.imageoverlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('your-background-image-url.jpg'); /* Add your background image URL */
+ 
+  z-index: 1000000;
+  opacity: 1; /* Adjust opacity as needed */
+}
+
+@media screen and (max-width: 600px) {
+  .imageoverlay {
+    top: -15vw;
+    bottom: 63vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.imageoverlay2 {
+
+  width: 100%;
+  height: 100%;
+  background-color: #000000b0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  position: fixed;
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+
+
+ 
+    
+
+  
+
+}
+
+
+
+.imageoverlaytext {
+
+
+  
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  right: 4em;
+  top: 50%;
+  z-index: 10000;
+  color: whitesmoke;
+  right: 0;
+
+  font-family: 'OPTIHollandseLight-Agency', sans-serif;
+
+  @media screen and (max-width: 600px){
+    
+    bottom: 63vw;
+    left: 50%;
+    text-align: center;
+    font-size: 5vw;
+    // font-family: "playfair display";
+    transform: translateX(-50%);
+  
+
+
+  }
+
+}
+
+

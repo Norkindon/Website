@@ -510,3 +510,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //music
+
+//cardrep
+$(document).ready(function() {
+  $('.cardrepindi').hover(
+    function() {
+      var index = $(this).data('index');
+      $('.card:nth-child(' + index + ')').addClass('hovered');
+    },
+    function() {
+      var index = $(this).data('index');
+      $('.card:nth-child(' + index + ')').removeClass('hovered');
+    }
+  );
+});

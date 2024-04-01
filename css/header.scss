@@ -2,78 +2,92 @@
 //     font-family: 'headerFont';
 //     src: url('https://example.com/font.woff2') format('woff2');
 
+
+
+
 @font-face {
   font-family: "Aceking";
   src: url("../assets/fonts/Aceking.woff") format("woff");}
+@import url('https://fonts.cdnfonts.com/css/rose-quay');
 
 
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Allow the width to adjust based on the content */
-    height: 4em;
-    // background-image: url("../assets/header/header.png");
-    // // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center top;
-    background-color: rgb(29, 29, 29);
-    z-index: 50000;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // mix-blend-mode: luminosity;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transition: .3s;
-  //   &.small {
-  //     height: 70px;
-  //     box-shadow: 0 0 5px rgba(black, .2);
-  //     // when header.small also change page offset
-  // }
+
+$headername: 'Rose Quay', sans-serif;  
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Allow the width to adjust based on the content */
+  height: 4em;
+  background-color: rgb(29, 29, 29);
+  z-index: 50000;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: .3s;
 }
-  
-  
-  .header h1 {
-    width: 10em;
-    height: 1.2em;
-    font-size: 200%;
-    z-index: 661;
+
+.header h1 {
+  width: 10em;
+  height: 1.2em;
+  font-size: 200%;
+  z-index: 661;
+  font-weight: normal;
+  text-align: center;
+  font-family: $headername;
+  font-style: normal;
+  color: #9d8353;
+  box-shadow: rgba(3, 3, 3, 0);
+  transition: color 1s ease, font-size 0.3s ease, font-style 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.header h1:hover {
+  color: rgba(238, 238, 238, 0); /* Fade to transparent */
+  transition-delay: 0s, 0s, 0s, 0s; /* Reset transition delays */
+  animation: fadeInToColor 1.3s ease forwards;
+}
+
+.header h1:not(:hover) {
+  animation: fadeOutFromColor 1.3s ease forwards;
+}
+
+@keyframes fadeInToColor {
+  0% {
     font-weight: normal;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: $headername;
     font-style: normal;
     color: #9d8353;
-    box-shadow: rgba(3, 3, 3, 0);
-    transition: color 1s ease, font-size 0.3s ease, font-style 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .header h1:hover {
-    color: rgba(238, 238, 238, 0); /* Fade to transparent */
-    transition-delay: 0s, 0s, 0s, 0s; /* Reset transition delays */
-    animation: fadeInToColor 1.3s ease forwards;
+ 
+  100% {
+    color: #eeeeee; /* Transition to hover color */
+    font-size: 240%;
+    font-style: oblique;
   }
-  
-  @keyframes fadeInToColor {
-    0% {
-      font-weight: normal;
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      font-style: normal;
-      color: #9d8353;
-     
-    }
-    50% {
-      color: rgba(238, 238, 238, 0);
-      font-style: normal;
-    }
-    100% {
-      color: #eeeeee; /* Transition to hover color */
-      font-size: 240%;
-      font-style: oblique;
-    }
+}
+
+@keyframes fadeOutFromColor {
+  0% {
+    color: #eeeeee; /* Start from hover color */
+    font-size: 240%;
+    font-style: oblique;
   }
+
+  100% {
+    font-weight: normal;
+    text-align: center;
+    font-family: $headername;
+    font-style: normal;
+    color: #9d8353;
+  }
+}
+
   
 
 

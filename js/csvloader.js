@@ -2,38 +2,22 @@
     function createHTMLFromCSV(csvData) {
         // Parse CSV data
         const rows = csvData.split('\n').map(row => row.split(','));
-
+    
         // Skip the first row
         const dataRows = rows.slice(1, rows.length - 1); // Exclude the first row and the last two empty rows
-
+    
         // Iterate through rows and create HTML content
-        dataRows.forEach(row => {
+        dataRows.forEach((row, index) => {
             const figure = document.createElement('figure');
-            
             figure.classList.add('swiper-slide');
-
-            
-
-
-
-
-
+    
             const cardPopout = document.createElement('div');
             cardPopout.classList.add('cardPopout');
             cardPopout.setAttribute('data-swiper-parallax', '30');
             cardPopout.setAttribute('data-swiper-parallax-scale', '0.9');
             cardPopout.setAttribute('data-swiper-parallax-opacity', '0.8');
             cardPopout.setAttribute('data-swiper-parallax-duration', '1000');
-
-            
-   
-
-            
-      
-
-
-
-
+    
             const img = document.createElement('img');
             img.src = row[1]; // Second box of the iterated row
             img.alt = row[2]; // Third box of the iterated row
@@ -42,32 +26,61 @@
             img.loading = 'lazy'; // Add lazy loading
             img.setAttribute('data-swiper-parallax', '80');
             img.setAttribute('data-swiper-parallax-duration', '2000');
-            
-
+    
             const title = document.createElement('h2');
             title.classList.add('title');
             title.textContent = row[2]; // Fourth box of the iterated row
             title.setAttribute('data-swiper-parallax', '80');
             title.setAttribute('data-swiper-parallax-duration', '1000');
-
+    
             const subtitle = document.createElement('h4');
             subtitle.classList.add('subtitle');
             subtitle.textContent = row[3]; // Fifth box of the iterated row
             subtitle.setAttribute('data-swiper-parallax', '80');
             subtitle.setAttribute('data-swiper-parallax-duration', '1500');
-
+    
             const figcaption = document.createElement('figcaption');
             figcaption.setAttribute('data-swiper-parallax', '80');
             figcaption.setAttribute('data-swiper-parallax-duration', '1250');
             figcaption.innerHTML = `<p>${row[4]}</p>`; // Sixth box of the iterated row
-
+    
             const continueReadingLink = document.createElement('a');
-            continueReadingLink.href = 'javascript:void(0);';
+            continueReadingLink.href = `./assets/artbig/art (${index + 1}).png`; // Dynamically set the href attribute
             continueReadingLink.title = 'Expand';
             continueReadingLink.setAttribute('data-swiper-parallax', '80');
             continueReadingLink.setAttribute('data-swiper-parallax-opacity', '0.2');
             continueReadingLink.setAttribute('data-swiper-parallax-duration', '1750');
             continueReadingLink.textContent = 'Expand';
+            
+            // Add click event listener to the "Expand" link
+            continueReadingLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of the link
+            
+                // Get the href attribute of the clicked link
+                const imageUrl = this.href;
+            
+                // Set the background image of the .imageoverlay element
+                const imageOverlay = document.querySelector('.imageoverlay');
+                const imageOverlay2 = document.querySelector('.imageoverlay2');
+                imageOverlay.style.backgroundImage = `url('${imageUrl}')`;
+            
+                // Show the image overlay
+                // imageOverlay.style.display = 'block';
+                // imageOverlay2.style.display = 'block';
+
+                imageOverlay.style.display = 'block';
+                imageOverlay2.style.display = 'block';
+            
+                // Append text from the fifth column of the iteration row
+                const fifthColumnText = row[4]; // Assuming the text is stored in the fifth column of the row
+                const imageOverlayText = document.querySelector('.imageoverlaytext');
+                imageOverlayText.textContent = fifthColumnText;
+               
+            })
+                
+
+
+                
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -132,3 +145,36 @@
 
 
         
+
+
+        function createOverlayWithImage(imageSrc) {
+    // Create overlay container
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+
+    // Set background image
+    overlay.style.backgroundImage = `url(${imageSrc})`;
+    
+    // Set height and width
+    overlay.style.height = '50vh';
+    overlay.style.width = 'auto';
+
+    // Append overlay to the body
+    document.body.appendChild(overlay);
+
+    // You can add additional styling or functionality here as needed
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var overlay = document.querySelector('.imageoverlay');
+    var overlay2 = document.querySelector('.imageoverlay2');
+
+    overlay2.addEventListener('click', function() {
+      overlay.style.display = 'none';
+      overlay2.style.display = 'none';
+    });
+  });
+
+

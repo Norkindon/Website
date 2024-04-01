@@ -15,10 +15,10 @@ const swiper = new Swiper(".swiper", {
         rotate: 40,
         slideShadows: true
     },
-    autoplay: {
-      delay: 5000,
-      pauseOnMouseEnter: true
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   pauseOnMouseEnter: true
+    // },
     autoplay: true, // Disable autoplay
    
     breakpoints: {
