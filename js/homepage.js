@@ -322,8 +322,13 @@ function scrollToPortfolio() {
   greenBox.scrollIntoView({ behavior: 'smooth' });
 }
 
+
+// function scrollToShop() {
+//   var greenBox = document.querySelector('.serviceblock');
+//   greenBox.scrollIntoView({ behavior: 'smooth' });
+// }
 function scrollToShop() {
-  var greenBox = document.querySelector('.serviceblock');
+  var greenBox = document.querySelector('.musicblock');
   greenBox.scrollIntoView({ behavior: 'smooth' });
 }
 

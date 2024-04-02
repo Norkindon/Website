@@ -19,7 +19,7 @@ const swiper = new Swiper(".swiper", {
     //   delay: 5000,
     //   pauseOnMouseEnter: true
     // },
-    autoplay: true, // Disable autoplay
+    autoplay: false, // Disable autoplay
    
     breakpoints: {
         0: {

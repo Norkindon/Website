@@ -7,12 +7,17 @@
 @import url('https://fonts.cdnfonts.com/css/seeds-of-yesterday');
 @import url('https://fonts.cdnfonts.com/css/globoface-gothic-display-2001');
 @import url('https://fonts.cdnfonts.com/css/rose-quay');
+@import url('https://fonts.cdnfonts.com/css/theano-didot'); // 'Theano Didot'
+@import url('https://fonts.cdnfonts.com/css/h-hinga'); //'h Hinga'
+@import url('https://fonts.cdnfonts.com/css/prosper-rules');
+@import url('https://fonts.cdnfonts.com/css/magical-dreams');
+@import url('https://fonts.cdnfonts.com/css/markofontina');
 
 
 
 
-$blocknamefont: 'Rose Quay', sans-serif;
-
+$blocknamefont: 'Markofontina', sans-serif;
+$maincolor: #9d8353;
 
 
 
@@ -36,7 +41,7 @@ body {
 }
 .blockbox {
   position: absolute;
-  top: 3.3em;
+  top: 4em;
   background-color: #1c1c1c;
   // mask-image: url("../assets/dither.bmp");
   // mask-position: center;
@@ -48,16 +53,16 @@ background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 1px 4px black;
   border-radius: 14px;
-  background-size: cover;
-  background-image: inherit;
+  //background-size: cover;
+  background-image: url("../assets/noise.png");
 }
 
 .blockname {
   font-size: calc((1vw + 1vh) / 0.4);
   // color: #9d8353;
-  color: whitesmoke;
+  color: $maincolor;
   text-align: center;
   //font-family: "playfair display";
   font-family: $blocknamefont;
@@ -164,7 +169,7 @@ transform: translate3d(0, -10vh, 0);
   font-family: "Cinzel Decorative", serif;
   font-weight: 700;
   font-style: normal;
-  color: #b48811;
+  color: $maincolor;
   --start-scale: 1;
   --mid-scale: 1.05;
   --end-scale: 1.1;
@@ -1505,7 +1510,7 @@ $contactSize: 1000px;
 }
 
 .swiper .swiper-slide h2 {
-    font-size: 200%;
+    font-size: 7vw;
     line-height: 110%;
     margin: 0 0 7px 0;
     color: rgb(0, 0, 0);
@@ -1714,7 +1719,7 @@ $contactSize: 1000px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('your-background-image-url.jpg'); /* Add your background image URL */
+ 
  
   z-index: 1000000;
   opacity: 1; /* Adjust opacity as needed */
@@ -1754,35 +1759,31 @@ $contactSize: 1000px;
 }
 
 
-
 .imageoverlaytext {
-
-
-  
   width: 40%;
-  height: 50%;
+  height: 50% ;
   position: absolute;
   right: 4em;
   top: 50%;
   z-index: 10000;
   color: whitesmoke;
   right: 0;
-
-  font-family: 'OPTIHollandseLight-Agency', sans-serif;
+  font-family: "OPTIHollandseLight-Agency", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  right: 2vw;
 
   @media screen and (max-width: 600px){
-    
+    width: 75%;
+    text-align: justify;
+    overflow: scroll;
     bottom: 63vw;
     left: 50%;
-    text-align: center;
+    text-align: justify;
     font-size: 5vw;
-    // font-family: "playfair display";
     transform: translateX(-50%);
-  
-
-
+    height: 40%;
   }
-
 }
-
-

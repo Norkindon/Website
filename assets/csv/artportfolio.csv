@@ -1,9 +1,11 @@
-Number,imageLink,Title,resolution,description
-1,.\assets\art\art (1).png,Grud,1024x1024,Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-2,.\assets\art\art (2).png,Bug,1024x1024,"Asperiores ipsum quia dolore iusto id delectus quis dolores aperiam praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-3,.\assets\art\art (3).png,Dugout,1024x1024,"praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-4,.\assets\art\art (4).png,Chug,1024x1024,"mollitia at cum voluptatem magnam quae officia natus! praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-5,.\assets\art\art (5).png,Lug,1024x1024,"itia at cum voluptatem magnam quae officia natus! praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-6,.\assets\art\art (6).png,Juggy,1024x1024,"itia at cum voluptatem magnam quae officia natus! praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-7,.\assets\art\art (7).png,GG Alvin,1024x1024,"itia at cum voluptatem magnam quae officia natus! praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
-8,.\assets\art\art (8).png,Cumdunger,1024x1024,"itia at cum voluptatem magnam quae officia natus! praesentium quasi minima ut, mollitia at cum voluptatem magnam quae officia natus!"
+User~Number~imageLink~Title~resolution~description
+1~.\assets\art\art (1).png~Giefel~1024x1024~"Photo and image manipulation via photoshop and custom code. a result of absolute distraction."
+2~.\assets\art\art (2).png~Tovelkuch~1024x683~"an unfinished piece. While browsing the internet, I stumbled upon a small image through which I imagiend a more beautiful paysage could be extracted. This is a common occurance for me and most of the pieces end up unfinished due to the lack of motivation or skill."
+3~.\assets\art\art (3).png~Erighk~1024x1024~"my first forey into assembling something out of Ai and then manipulating with my other techniques."
+4~.\assets\art\art (4).png~Was Here~1024x1024~"A piece from my abstract collection."
+5~.\assets\art\art (5).png~Untitled 73~1024x1024~"An unfinished piece."
+6~.\assets\art\art (6).png~Enjoy!~1024x1024~"A really nice multimedia piece I made in 2023. It is meaningless, but really does a lot for me visually with all that yellow and visual complexity"
+7~.\assets\art\art (7).png~Snap Of Hap~4000x2250~"Halfway through 2023, I lost a poker game to my girlfriend, and the wager was that I wouldn't play video games for the rest of the year. Admittedly, I found myself surprisingly eager for the new year to arrive so I could indulge in meaningful games, particularly Final Fantasy X. As soon as I could, I began playing the game, and early on, I encountered a beautiful shot. It's a fleeting moment, seemingly insignificant, where Wakka, the soon-to-be best friend of the protagonist, playfully pushes the hesitant hero into a lake, then looks on to ensure he's okay. In that instant, I felt compelled to capture and convey the essence of the game visually with just that single screenshot. The result is this manipulated image, which I believe captures the essence of Final Fantasy X quite nicely."
+8~.\assets\art\art (8).png~Nature Of Speed~1024x1024~"Super cool combination of over 20 images, and hours of work trying to mimic abstract oil paint. It's hilarious though, you could never tell." 
+9~.\assets\art\art (9).png~Flean~1024x1024~"An unfinished piece. 2"
+10~.\assets\art\art (10).png~Good Idea Machine~1024x1024~"An unfinished piece. 3"

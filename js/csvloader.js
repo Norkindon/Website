@@ -1,7 +1,7 @@
     // Function to create HTML content from CSV data
     function createHTMLFromCSV(csvData) {
         // Parse CSV data
-        const rows = csvData.split('\n').map(row => row.split(','));
+        const rows = csvData.split('\n').map(row => row.split('~'));
     
         // Skip the first row
         const dataRows = rows.slice(1, rows.length - 1); // Exclude the first row and the last two empty rows

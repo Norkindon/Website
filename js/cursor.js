@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateCursorPosition(x, y) {
     setCursorSize();
     // Animate cursor movement using GSAP
-    TweenMax.to(cursorContainer, 3, { left: x - followMouse.offsetWidth / 2.4, top: y });
+    TweenMax.to(cursorContainer, 1, { left: x - followMouse.offsetWidth / 2.4, top: y });
   }
 
   // Mouse move event

@@ -9,10 +9,11 @@
   font-family: "Aceking";
   src: url("../assets/fonts/Aceking.woff") format("woff");}
 @import url('https://fonts.cdnfonts.com/css/rose-quay');
+@import url('https://fonts.cdnfonts.com/css/mcenneking');
 
 
 
-$headername: 'Rose Quay', sans-serif;  
+$headername: 'mcenneking', sans-serif;  
 
 .header {
   position: fixed;
@@ -29,6 +30,7 @@ $headername: 'Rose Quay', sans-serif;
   align-items: center;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transition: .3s;
+  background-image: url("../assets/noise.png");
 }
 
 .header h1 {
@@ -44,6 +46,7 @@ $headername: 'Rose Quay', sans-serif;
   box-shadow: rgba(3, 3, 3, 0);
   transition: color 1s ease, font-size 0.3s ease, font-style 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  
 }
 
 .header h1:hover {
